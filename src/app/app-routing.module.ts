@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'admin/report',
     loadChildren: () => import('../app/module/admin/report/report.module').then((x) => x.ReportModule ),
+  },
+  {
+    path: 'form',
+    loadChildren: () => import('../app/module/forms/forms.module').then((x) => x.FormsModule)
   }
 ];
 

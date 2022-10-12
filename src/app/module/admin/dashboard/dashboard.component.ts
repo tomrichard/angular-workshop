@@ -15,6 +15,31 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+    // this.observableService.getFruits().subscribe(
+    //   (next: string) => {
+    //     this.fruits.push(next);
+    //   },
+    //   (error) => {
+    //     this.fruits.push('error');
+    //   },
+    //   () => {
+    //     this.fruits.push('complete');
+    //   }
+    // );
+
+    this.observableService.customObservable().subscribe(
+      (next: string) => {
+        this.fruits.push(next);
+      },
+      (error) => {
+        this.fruits.push(error);
+      },
+      () => {
+        this.fruits.push('complete');
+      }
+    );
+
     // this.observableService.getFruits().subscribe(
     //   (next: string) => {
     //     this.fruits.push(next);
@@ -27,17 +52,17 @@ export class DashboardComponent implements OnInit {
     //   }
     // );
 
-    this.observableService.customObservable().subscribe(
-      (next: string) => {
-        this.fruits.push(next);
-      },
-      (error) => {
-        alert('error');
-      },
-      () => {
-        this.fruits.push('complete');
-      }
-    );
+    // this.observableService.customObservable().subscribe(
+    //   (next: string) => {
+    //     this.fruits.push(next);
+    //   },
+    //   (error) => {
+    //     alert('error');
+    //   },
+    //   () => {
+    //     this.fruits.push('complete');
+    //   }
+    // );
 
   }
 
