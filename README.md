@@ -8,11 +8,11 @@ Cara Run :
 
 Run Mock API Server
 
-npm run mock:server 
+`npm run mock:server` 
 
 Run Angular Web
 
-npm run start
+`npm run start`
 
 ## Code scaffolding
 
