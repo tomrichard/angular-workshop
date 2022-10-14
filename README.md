@@ -1,4 +1,4 @@
-# MyAppTom
+# Angular Workshop
 
 Angular 12 + NgBootstrap
 
