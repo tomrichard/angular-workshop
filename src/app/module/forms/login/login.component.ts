@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
 import { LoginService } from 'src/app/services/auth/login.service';
 
 @Component({
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
   });
 
   constructor(
+    private readonly router: Router,
     private readonly loginService: LoginService
   ) { }
 
@@ -25,22 +27,24 @@ export class LoginComponent implements OnInit {
 
   submitLogin() {
 
-    if( this.formGroupLogin.valid ) {
-      this.loginService.postLogin(this.formGroupLogin.value).subscribe(
-        // next
-        (response) => {
-          alert("success");
-          alert(JSON.stringify(response));
-        },
-        (error) => {
+    this.router.navigate(["admin/dashboard"]);
 
-          this.message = error.error.message;
+    // if( this.formGroupLogin.valid ) {
+    //   this.loginService.postLogin(this.formGroupLogin.value).subscribe(
+    //     // next
+    //     (response) => {
+    //       alert("success");
+    //       alert(JSON.stringify(response));
+    //     },
+    //     (error) => {
 
-        }
-      );
-    }else {
-      alert('Form Not Valid');
-    }
+    //       this.message = error.error.message;
+
+    //     }
+    //   );
+    // }else {
+    //   alert('Form Not Valid');
+    // }
 
   }
 

@@ -26,6 +26,7 @@ export class SederhanaComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    alert('ok');
   }
 
   submitButtonClick() {

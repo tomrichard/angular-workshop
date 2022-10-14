@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminContentComponent } from './core/layouts/admin-content/admin-content.component';
+import { DashboardComponent } from './module/admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    path: 'profile',
-    loadChildren: () => import('../app/module/profile/profile.module').then((x) => x.ProfileModule)
-  },
-  {
     path: 'admin',
-    loadChildren: () => import('../app/module/admin/dashboard/dashboard.module').then((x) => x.DashboardModule ),
-  },
-  {
-    path: 'admin/report',
-    loadChildren: () => import('../app/module/admin/report/report.module').then((x) => x.ReportModule ),
+    component: AdminContentComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: () => import('../app/module/admin/dashboard/dashboard.module').then((x) => x.DashboardModule)
+      }
+    ],
   },
   {
     path: 'form',

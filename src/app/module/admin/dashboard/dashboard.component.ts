@@ -8,6 +8,8 @@ import { ObservableService } from 'src/app/services/observable/observable.servic
 })
 export class DashboardComponent implements OnInit {
 
+  model: any;
+
   fruits:any = [];
 
   constructor(
@@ -28,17 +30,17 @@ export class DashboardComponent implements OnInit {
     //   }
     // );
 
-    this.observableService.customObservable().subscribe(
-      (next: string) => {
-        this.fruits.push(next);
-      },
-      (error) => {
-        this.fruits.push(error);
-      },
-      () => {
-        this.fruits.push('complete');
-      }
-    );
+    // this.observableService.customObservable().subscribe(
+    //   (next: string) => {
+    //     this.fruits.push(next);
+    //   },
+    //   (error) => {
+    //     this.fruits.push(error);
+    //   },
+    //   () => {
+    //     this.fruits.push('complete');
+    //   }
+    // );
 
     // this.observableService.getFruits().subscribe(
     //   (next: string) => {

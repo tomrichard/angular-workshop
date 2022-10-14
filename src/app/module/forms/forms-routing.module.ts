@@ -5,6 +5,10 @@ import { SederhanaComponent } from './sederhana/sederhana.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: SederhanaComponent
+  },
+  {
     path: 'sederhana',
     component: SederhanaComponent
   },

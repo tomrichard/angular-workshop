@@ -1,0 +1,36 @@
+.sidebar {
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100vh;
+    background: red;
+    position: fixed;
+    padding: 72px 16px 16px 16px;
+}
+
+.main-content {
+    position: relative;
+    padding-top: 56px;
+    margin-left: 300px;
+    min-height: calc(100% - 56px);
+    background: #EEEEEE;
+}
+
+.body-content {
+    padding: 16px 16px 64px 16px;
+    background: white;
+}
+
+.footer {
+    background: #343a40;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 16px;
+    color: white;
+    text-align: right;
+}
+
+.column-flex {
+    width: 25%;
+}

@@ -1,6 +1,20 @@
-<ul>
-    <li *ngFor="let fruit of fruits">{{ fruit }}</li>
-</ul>
+<div class="body-content">
 
-<form></form>
+    <!-- flex wrap supaya bisa wrapping ke bawah -->
+    <div class="d-flex flex-wrap">
+      <!-- col-3: column dengan lebar (100%/12)*3  -->
+      <!-- pb-2: padding-bottom untuk memberikan space di bawah -->
+      <div class="col-3 pb-4" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="card">
+          <img src="assets/image/angular.svg" class="card-img-top" alt="image">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a [routerLink]="['/form/login']" href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
 
+    </div>
+
+</div>
